@@ -1,0 +1,53 @@
+.options {
+    display: flex;
+    justify-content: center
+}
+
+.feedbackButton {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.good {
+    composes: feedbackButton;
+    background-color: green;
+}
+
+.good:hover {
+    background-color: darkgreen;
+}
+
+
+.neutral {
+    composes: feedbackButton;
+    background-color: darkgray;
+}
+
+.neutral:hover {
+    background-color: grey;
+}
+
+.bad {
+    composes: feedbackButton;
+    background-color: red;
+}
+
+.bad:hover {
+    background-color: darkred;
+}
+
+.reset {
+    outline: 1px solid darkgray;
+    composes: feedbackButton;
+    color: black;
+    background-color: white;
+}
+
+.reset:hover {
+  background-color: whitesmoke;
+}
