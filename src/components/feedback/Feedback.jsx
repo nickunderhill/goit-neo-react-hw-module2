@@ -1,7 +1,6 @@
 import css from './Feedback.module.css';
 
-function Feedback({ feedback, total }) {
-  const positivePercentage = total ? (feedback.good / total) * 100 : 0;
+function Feedback({ feedback, total, positivePercentage }) {
   return (
     <div className={css.feedback}>
       <p>
@@ -17,7 +16,7 @@ function Feedback({ feedback, total }) {
         Total: <span>{total}</span>
       </p>
       <p>
-        Positive: <span>{positivePercentage.toFixed(2)}%</span>
+        Positive: <span>{positivePercentage}%</span>
       </p>
     </div>
   );

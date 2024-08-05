@@ -38,13 +38,20 @@ function App() {
   };
 
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+  const positivePercentage = (
+    totalFeedback ? (feedback.good / totalFeedback) * 100 : 0
+  ).toFixed(2);
 
   return (
     <div className={css.container}>
       <Description></Description>
       <Options updateFeedback={updateFeedback} total={totalFeedback}></Options>
       {totalFeedback > 0 ? (
-        <Feedback feedback={feedback} total={totalFeedback} />
+        <Feedback
+          feedback={feedback}
+          total={totalFeedback}
+          positivePercentage={positivePercentage}
+        />
       ) : (
         <Notification></Notification>
       )}
